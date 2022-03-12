@@ -1,0 +1,26 @@
+server:
+  port: 8080
+spring:
+  main:
+    banner-mode: off
+  output:
+    ansi:
+      enabled: always
+logging:
+  level:
+    cpa.ibgwapi: INFO
+gateway:
+  host: 127.0.0.1
+  port: 4001
+  clientId: 1234
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+server:
+  port: 8080
+gateway:
+  host: 127.0.0.1
+  port: 4001
+  clientId: 1234
